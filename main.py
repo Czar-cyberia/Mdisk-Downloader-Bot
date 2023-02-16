@@ -322,7 +322,7 @@ def multilinks(message,links):
 
 
 # mdisk link in text
-@app.on_message(filters.text)
+@app.on_message(filters.text & filters.incoming)
 def mdisktext(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     
     if isPremmium and message.chat.id == temp_channel: return
